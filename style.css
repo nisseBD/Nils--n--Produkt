@@ -33,11 +33,9 @@ body {
 }
 
 
-.container {
-    height: 350px;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
+.container { 
+    height: 350px; /*Sätter höjden på containern*/
+    white-space: nowrap; /*Sätter alla bilder på en rad*/
     margin: 0px;
     padding: 0px;
 }
@@ -45,12 +43,11 @@ body {
 .item {
     background-color: lightgreen;
     height: 200px;
-    border-radius: 20px; 
+    border-radius: 20px; /*gör hörnen runda*/
     margin-bottom: 0px;
     top: 0px; 
-    left: 0px; 
-    overflow: hidden;   
-    animation: bannermove 10s linear infinite; 
+    left: 0px;  
+    animation: bannermove 10s linear infinite; /*säger att animationen banner move ska hålla på i evighet och fart*/
 }
 
 .item img {    
@@ -59,7 +56,7 @@ body {
 
   @keyframes bannermove {
     100% {
-        transform: translate(-810%, 0);
+        transform: translate(-810%, 0); /*vart animationen ska sluta börja om någonstans*/
     }
   }
 
@@ -81,22 +78,22 @@ h5 {
 
 
 .container-2 {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /*gör så att flera childs kan läggas på en rad*/
+    flex-wrap: wrap; /*wrappar alla childs så att de kommer på en eller flera rader*/
     margin-top: 50px;
 }
   
 .container-2 .image {
-    width: 50%;
+    width: 50%; /*sätter bredden på alla childs*/
 }
 
 .image {
     display: flex;
-    border-radius: 20px;
+    border-radius: 20px; 
 }
   
 .container-2 img {
-    width: calc(100% - (40px * 2));
+    width: calc(100% - (40px * 2)); /*Hur lång ifrån varandra dom ska vara och om de ska vara 2x2 och så vidare*/
     margin: 20px;
 }
 
@@ -167,7 +164,7 @@ hr {
     height: 300px;
     width: 300px;
     margin-top: 0px;
-    margin-left: 100px;
+    margin-left: 150px;
     margin-right: 0px;
     padding-right: 0px;
 }
@@ -179,4 +176,25 @@ h2 {
     align-content: center;
     margin-bottom: 10px;
     margin-top: 80px;
+    color: white
 }
+
+.info {
+    display: flex;
+}
+
+.paragraf {
+    font-size: 125%;
+    margin-left: 100px;
+    margin-top: 50px;
+    color: white;
+}
+
+.fakta {
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+

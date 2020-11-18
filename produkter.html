@@ -19,11 +19,11 @@
     </div>
 
     <div>
-        <div class="container-2">
+        <div class="container-2"> <!--Lägger in alla bilder i en container-->
             <div class="image">
               <img src="/Bilder/1.png" class="image">
               <div class="buy">
-                <p id="cart"><button onclick="clickCounter()" type="button">Add to Cart</button></p>
+                <p id="cart"><button onclick="clickCounter()" type="button">Add to Cart</button></p> <!--när man trycker på en knapp så går functionen igång-->
                 <a id="info" href="https://shop.52kards.com/products/virtuoso" target="_blank"><button type="button">info</button></a>
               </div>
             </div>
@@ -78,16 +78,16 @@
               </div>
           </div>
     </div>
-    <script>
-      function clickCounter() {
-        if (typeof(Storage) !== "undefined") {
+    <script> /*Detta script gör så att det läggs till 1 per gång du klickar på add to cart*/
+      function clickCounter() { /*namnet på funktionen*/
+        if (typeof(Storage) !== "undefined") { 
           if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+1;
+            localStorage.clickcount = Number(localStorage.clickcount)+1; /*gör ett slags storage som sparar hur många produkter du klickar på och adderar med 1 per gång du klickar*/
           } 
           else {
             localStorage.clickcount = 1 ;
           }
-            document.getElementById("result").innerHTML = localStorage.clickcount;
+            document.getElementById("result").innerHTML = localStorage.clickcount;  
           } else {
             document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
         }
@@ -95,7 +95,7 @@
     </script>
     <hr id="hr2"></hr>
     <footer>
-
+      <h1>Terms of service</h1>
     </footer>
 </body>
 </html>
